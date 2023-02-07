@@ -2,16 +2,15 @@ package filteringFunction;
 
 import java.util.Objects;
 
-public class Apple {
+public class Bananas {
 
     private int weight = 0;
     private Color color;
 
-    public Apple(int weight, Color color) {
+    public Bananas(int weight, Color color) {
         this.weight = weight;
         this.color = color;
     }
-
 
     public int getWeight() {
         return weight;
@@ -32,10 +31,11 @@ public class Apple {
     @SuppressWarnings("boxing")
     @Override
     public String toString() {
-        return String.format("Apple{color=%s, weight=%d}", color, weight);
+        return String.format("filteringFunction.Bananas{color=%s, weight=%d}", color, weight);
     }
 
     @Override
+
     public boolean equals(Object o) {
         if (this == o) {
             return true;
@@ -43,7 +43,7 @@ public class Apple {
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        Apple apple = (Apple) o;
+        Bananas apple = (Bananas) o;
         return weight == apple.weight && color == apple.color;
     }
 
